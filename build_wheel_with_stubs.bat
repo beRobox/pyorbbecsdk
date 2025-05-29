@@ -67,3 +67,5 @@ python setup.py bdist_wheel
 
 @REM # Exit python virtual env
 call deactivate
+
+ECHO "Python wheel can be found in dist folder"
