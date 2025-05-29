@@ -58,7 +58,8 @@ REM Set the PYTHONPATH environment variable
 SET "PYTHONPATH=%CURR_DIR%\install\lib;%PYTHONPATH%"
 
 pip3 install pybind11-stubgen
-pybind11-stubgen __init__ -o install\lib\pyorbbecsdk
+pybind11-stubgen pyorbbecsdk -o install\lib\pyorbbecsdk
+ren install\lib\pyorbbecsdk\pyorbbecsdk.pyi __init__.pyi
 
 @REM # Run Python setup.py to build a wheel package
 python setup.py bdist_wheel
